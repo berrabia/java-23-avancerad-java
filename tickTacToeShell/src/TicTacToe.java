@@ -8,6 +8,7 @@ public class TicTacToe extends JFrame {
     public static final String ICON_URL = "src/icon-05.png";
     static int gameMode = 0; //använd variabeln eller likande för gamemode
     static final int UNI_PADDING = 10;
+    // ni kan ha 2d array [][] för cellerna också
     static ArrayList<JButton> cellList = new ArrayList<>();
     private static TicTacToe application;
 
