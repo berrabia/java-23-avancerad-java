@@ -1,12 +1,10 @@
 import java.io.*;
 import java.util.*;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class Main {
     static final int groupAmount = 10;
 
     public static void main(String[] args) {
-        final Random r = new Random();
         ArrayList<String> temp = new ArrayList<>();
         try {
 /*            String currentPath = new java.io.File(".").getCanonicalPath();
@@ -29,12 +27,12 @@ public class Main {
             Collections.sort(temp);
 
             System.out.println(Arrays.deepToString(temp.toArray()));
-            String result = Arrays.deepToString(temp.toArray()).toString().replaceAll("[^a-zA-Z0-9 ,]", "").replace(",", "\n");
+            String result = Arrays.deepToString(temp.toArray()).replaceAll("[^a-zA-Z0-9 ,]", "").replace(",", "\n");
             System.out.println(result);
             try {
                 File file = new File("result.txt");
                 FileWriter fileWrite = new FileWriter(file);
-                BufferedWriter bufferedWriter = new BufferedWriter(fileWrite);
+                //BufferedWriter bufferedWriter = new BufferedWriter(fileWrite);
                 fileWrite.write(result);
                 fileWrite.close();
             } catch (Exception e) {
