@@ -30,7 +30,7 @@ public class Main {
             String result = Arrays.deepToString(temp.toArray()).replaceAll("[^a-zA-Z0-9 ,]", "").replace(",", "\n");
             System.out.println(result);
             try {
-                File file = new File("result.txt");
+                File file = new File("src/result.txt");
                 FileWriter fileWrite = new FileWriter(file);
                 //BufferedWriter bufferedWriter = new BufferedWriter(fileWrite);
                 fileWrite.write(result);
