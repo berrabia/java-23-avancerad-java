@@ -2,7 +2,7 @@
 
 
 ──────────
-Alrik He is inviting you to a scheduled Zoom meeting.
+Onsdag 13:00 - 15:00.
 
 Join Zoom Meeting
 https://us06web.zoom.us/j/3459911118?omn=82889488595
