@@ -5,29 +5,30 @@ public class Main {
     static final int groupAmount = 10;
 
     public static void main(String[] args) {
-        ArrayList<String> temp = new ArrayList<>();
+        ArrayList<String> nameArray = new ArrayList<>();
         try {
 /*            String currentPath = new java.io.File(".").getCanonicalPath();
-            System.out.println("Current dir:" + currentPath);*/
+            System.out.println("Current dir:" + currentPath);*/        //Är abstract files faktiskt abstrakt
             File namnfile = new File("src/nameList.txt");
             Scanner sc = new Scanner(namnfile);
-            temp = new ArrayList<>();
+            nameArray = new ArrayList<>();
+            //Avslutas med vad somd standard? whitespace?
             while (sc.hasNext())
-                temp.add(sc.nextLine());
+                nameArray.add(sc.nextLine());
             sc.close();
 
-            System.out.println(Arrays.deepToString(temp.toArray()));
-            Collections.shuffle(temp);
+            System.out.println(Arrays.deepToString(nameArray.toArray()));
+            Collections.shuffle(nameArray);
 
 
-            for (int i = 0; i < temp.size(); i++)
-                System.out.println(temp.set(i, (i + 1) % groupAmount + " " + temp.get(i)));
+            for (int i = 0; i < nameArray.size(); i++)
+                System.out.println(nameArray.set(i, i%groupAmount+1 + " " + nameArray.get(i)));
 
 
-            Collections.sort(temp);
-
-            System.out.println(Arrays.deepToString(temp.toArray()));
-            String result = Arrays.deepToString(temp.toArray()).replaceAll("[^a-zA-Z0-9 ,]", "").replace(",", "\n");
+            Collections.sort(nameArray);
+            //deep content är bara content pga arraylist ej är implicit typad?
+            System.out.println(Arrays.toString(nameArray.toArray()));
+            String result = Arrays.toString(nameArray.toArray()).replaceAll("[^a-zA-Z0-9 ,]", "").replace(",", "\n");
             System.out.println(result);
             try {
                 File file = new File("src/result.txt");
