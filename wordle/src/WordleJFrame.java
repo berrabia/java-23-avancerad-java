@@ -6,12 +6,13 @@ import java.util.ArrayList;
 
 
 public class WordleJFrame extends JFrame {
-
-
+    // skapa classer för samatbete
+    // mer ord randomisa det
+    //features : läs från file ,lägg till fler game modes
     private final String[] wordArray = {"TEST"};
     private ArrayList<JTextField> jfArray = new ArrayList<>();
 
-    JPanel gamearea;
+    private JPanel gamearea;
     private String result = "";
 
     WordleJFrame() {
@@ -39,7 +40,6 @@ public class WordleJFrame extends JFrame {
                                 jt.setText(String.valueOf(c).toUpperCase());
                             else
                                 jt.setText("");
-
                         }
                     });
             jt.setHorizontalAlignment(JTextField.CENTER);
@@ -66,7 +66,7 @@ public class WordleJFrame extends JFrame {
     }
 
     private void feedback() {
-
+        // EXEMPEL PÅ SVAR
         System.out.println("letter " + result.charAt(0) + " :is on the wrong place");
         System.out.println("letter " + result.charAt(1) + " :is on the correct place");
         System.out.println("letter " + result.charAt(2) + " :is doesnt exist");
@@ -77,5 +77,12 @@ public class WordleJFrame extends JFrame {
         System.out.println("letter " + jfArray.get(3).getText() + " :is doesnt exist");*/
     }
 
+
+    void makeHistory ( int amountOfTries) {
+        //skapa rutor med färger som beskriver om ordet är korrekt
+        //grön rätt bokstav + rätt plats
+        //Gul rätt bokstav + fel plats
+        //Vit är fel bokstav + existerar ej i ordet
+    }
 
 }
