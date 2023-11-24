@@ -7,6 +7,7 @@ public class Main {
     public static void main(String[] args) {
         ArrayList<String> nameArray = new ArrayList<>();
         try {
+
 /*            String currentPath = new java.io.File(".").getCanonicalPath();
             System.out.println("Current dir:" + currentPath);*/        //Är abstract files faktiskt abstrakt
             File namnfile = new File("src/nameList.txt");

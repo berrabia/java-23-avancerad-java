@@ -18,6 +18,22 @@ public class TicTacToe extends JFrame {
     }
 
     public static void main(String[] args) {
+
+        String[] sa= {  "alrik","viktor","anna","emma"};
+
+        for(int i=0 ; i< sa.length; i++ )
+            System.out.println(sa[i]);
+
+        int j=0 ;
+        while(j< sa.length){
+            System.out.println(sa[j]);
+            j++;
+        }
+
+        for (String namn  : sa){
+            System.out.println(namn);
+        }
+
         application = new TicTacToe();
         application.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Image iconImage= new ImageIcon("src/icon-05.png").getImage();
@@ -55,9 +71,10 @@ public class TicTacToe extends JFrame {
     public static void changeGameMode(){
         // skapa en panel med er custom game mode
         final JDialog frame = new JDialog(application, "Game mode", true);
-        frame.getContentPane().add(new JPanel());
+        JPanel comp = new JPanel();
+        frame.getContentPane().add(comp);
         frame.pack();
-        frame.setVisible(true);
+        frame.setVisible(false);
     }
 
     public static boolean checkWinOrDraw(){
