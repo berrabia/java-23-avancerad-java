@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 
 public class WordleJFrame extends JFrame {
-    // skapa classer för samatbete
+    // skapa classer för sam-atbete
     // mer ord randomisa det
     //features : läs från file ,lägg till fler game modes
     private final String[] wordArray = {"TEST"};
