@@ -2,9 +2,15 @@
 ## github test
 ### by Alrik
 
-'''
+```
 code java
-'''
+
+var x = 5
+```
+- First item
+- Second item
+- Third item
+
 
 ──────────
 Onsdag 13:00 - 15:00.
